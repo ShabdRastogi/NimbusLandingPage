@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #020914;
+    color: white;
+    font-family: "Rajdhani", sans-serif;
+    overflow-x: hidden;
+}
+
+.navbar {
+    height: 70px;
+    width: 100%;
+    padding: 0 3.5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #02060e;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    position: relative;
+    z-index: 100;
+}
+
+.society {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 17px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.society-logo {
+    width: 28px;
+    height: 28px;
+}
+
+.society-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav a {
+    color: #e2e2e2;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    position: relative;
+}
+
+nav a:hover {
+    color: #00d9ff;
+}
+
+nav a.active {
+    color: #00d9ff;
+}
+
+nav a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -13px;
+    width: 100%;
+    height: 2px;
+    background: #00d9ff;
+    box-shadow: 0 0 8px #00d9ff;
+}
+
+.register-nav {
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #a13dd4, #7130a2);
+    box-shadow: 0 0 15px rgba(157,52,218,0.3);
+    transition: 0.25s;
+}
+
+.register-nav:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 25px rgba(157,52,218,0.6);
+    transition: 0.25s;
+}
+
+.hero {
+    width: 100%;
+    height: calc(100vh - 70px);
+    position: relative;
+    overflow: hidden;
+    background: #020914;
+}
+
+.hero-background {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.hero-elements {
+    position: absolute;
+    z-index: 3;
+    width: 68%;
+    max-width: 900px;
+    right: -1%;
+    bottom: -2%;
+    height: auto;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 5;
+    width: 52%;
+    min-height: calc(100vh - 70px);
+    padding-left: 7%;
+    padding-top: 55px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.society-name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #30d8fa;
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 17px;
+}
+
+.society-name img {
+    width: 27px;
+    height: 27px;
+    object-fit: contain;
+}
+
+.presents {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    letter-spacing: 4px;
+    color: #f4f4f4;
+    margin-bottom: 8px;
+}
+
+.presents hr {
+    width: 32px;
+    height: 2px;
+    background: #16ccea;
+    border: none;
+}
+
+.nimbus-logo {
+    width: 380px;
+    height: auto;
+    display: block;
+    margin-top: -40px;
+    margin-bottom: -20px;
+    margin-left: -7px;
+    object-fit: contain;
+}
+
+.hero h2 {
+    font-family: Arial, sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    color: #f3f3f3;
+    margin-bottom: 13px;
+}
+
+.description {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.65;
+    color: #d4d8df;
+    margin-bottom: 25px;
+}
+
+.event-info {
+    display: flex;
+    width: fit-content;
+    max-width: 100%;
+    border: 1px solid rgba(119,142,176,0.45);
+    border-radius: 9px;
+    background: rgba(2,10,22,0.58);
+    backdrop-filter: blur(8px);
+    margin-bottom: 24px;
+}
+
+.info-box {
+    min-height: 62px;
+    padding: 11px 15px;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    border-right: 1px solid rgba(119,142,176,0.35);
+}
+
+.info-box:last-child {
+    border-right: none;
+}
+
+.info-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    font-size: 11px;
+    line-height: 1.25;
+    white-space: nowrap;
+}
+
+.icon {
+    font-size: 25px;
+    color: #a95ce5;
+    width: 28px;
+    text-align: center;
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.hero-buttons a {
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 12px 22px;
+    border-radius: 8px;
+}
+
+.primary-button {
+    color: white;
+    background: linear-gradient(135deg, #a23bd8, #7330a4);
+    box-shadow: 0 0 18px rgba(155,48,213,0.35);
+}
+
+.primary-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 25px rgba(155,48,213,0.65);
+}
+
+.secondary-button {
+    color: white;
+    border: 1px solid rgba(160,170,190,0.7);
+    background: rgba(2,10,20,0.7);
+}
+
+.secondary-button:hover {
+    border-color: #00d9ff;
+    color: #00d9ff;
+}
+
+.secondary-button span {
+    margin-left: 8px;
+    font-size: 18px;
+}
